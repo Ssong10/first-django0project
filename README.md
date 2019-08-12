@@ -57,7 +57,7 @@ $ python manage.py runserver
 ### 3. settings.py
 
 ```python
-LANGUAGE_CODE = 'ko-ko'
+LANGUAGE_CODE = 'ko-kr'
 
 TIME_ZONE = 'Asia/Seoul'
 ```
