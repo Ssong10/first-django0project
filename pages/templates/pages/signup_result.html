@@ -7,8 +7,14 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>{{ data }}</h1>
-  <a href="/ping/"> 입력하기 </a>
-  <h1>{{pwd}}</h1>
+  <h1> {{ name }}님~ {{ result }} </h1>
+  {% if '축하' in result %}
+  <h1> 아이디는 {{ username }} </h1>
+  <h1> 비밀번호는 {{ pwd }} </h1>
+
+  {% endif %}
+
+
+  <a href="/pages/signup/"> 회원가입으로 돌아가기</a>
 </body>
 </html>

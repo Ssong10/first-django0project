@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Django services</title>
+  <style>
+  .topdiv {
+    height:50px;
+    background-color:antiquewhite;
+    position:sticky;
+    margin:auto;
+    text-align: center;
+  }
+  {% block css %} {% endblock %}
+  </style>
+</head>
+<body>
+  <div class="topdiv">
+    이것이 베이스이다.
+  </div>
+  {% block body %}
+  {% endblock %}
+</body>
+</html>
