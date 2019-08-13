@@ -7,20 +7,50 @@
   <title>Django services</title>
   <style>
   .topdiv {
+    display:flex;
     height:50px;
     background-color:antiquewhite;
     position:sticky;
     margin:auto;
     text-align: center;
+    margin-bottom :20px;
   }
+  .base {
+    align-self: center;
+    justify-self: center;
+  }
+
+  .goindex{
+    justify-self: right;
+    margin-left: auto;
+    
+  }
+
+  a div {
+    justify-self: right;
+    display:inline-block;
+    margin-left: auto;
+    height:50px;
+    width:100px;
+    background-color: darkgray;
+  }
+
   {% block css %} {% endblock %}
   </style>
 </head>
 <body>
   <div class="topdiv">
-    이것이 베이스이다.
+    <div class="base">이것이 베이스이다.</div>
+    <div class="goindex">
+      <a href="/pages/">
+        <div>pages</div>
+      </a>
+      <a href="/services/">
+        <div>service</div>
+      </a>
+    </div>
   </div>
-  {% block body %}
-  {% endblock %}
+
+  {% block body %}  {% endblock %}
 </body>
 </html>

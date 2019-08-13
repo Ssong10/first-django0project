@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block css %}
+h1 {
+  color:blueviolet;
+}  
+{% endblock %}
+
+{% block body %}
+<h1>Push Number</h1>
+<form action="/services/pull">
+  <input name="num" type="number">
+  <input type="submit" value="push!">
+</form>
+{% endblock %}

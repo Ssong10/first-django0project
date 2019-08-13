@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block css %}
+h1 {
+  color:blueviolet;
+} 
+input, label {
+  margin : 10px;
+}
+{% endblock %}
+
+{% block body %}
+  <form action="/services/artii_result/" method="GET">
+    <label for="text"> 영어로좀</label>
+    <input id="text" type="text" name="text" placeholder="문자열을 입력해주세요"><br>
+    <label for="font"> 글꼴은? </label>
+    <select name="font" id="font">
+      <option value="base" selected>기본</option>
+      <option value="rounded">rounded</option>
+      <option value="acrobatic">acrobatic</option>
+      <option value="alligator">alligator</option>
+      <option value="short">short</option>
+      <option value="type_set">type_set</option>
+    </select><br>
+    <input type="submit" value="변환하기">
+  </form>
+{% endblock %}
