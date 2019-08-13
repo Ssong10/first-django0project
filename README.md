@@ -24,6 +24,54 @@ $ python -m pip install --upgrade pip
    * 현재 활용하고 있는 버전은 다음과 같다.
      * python 3.7.4
      * django 2.2.4
+     
+     
+
+### :next_track_button: 간단 폴더만들기
+
+1. 폴더 만들기
+
+   ```bash
+   $ mkdir __folder__
+   ```
+
+2. 가상환경 만들기
+
+   ```bash
+   $ python -m venv venv
+   ```
+
+   2.1. `.gitignore`에 `venv/`  등 추가
+
+3. 가상환경 실행 후
+
+   ```bash
+   $ source venv/Scripts/activate
+   ```
+
+5. 장고 설치
+
+   ```bash
+   $ pip install django
+   ```
+
+6. 프로젝트생성
+
+   ```bash
+   $ django-admin startproject __projectname__ .
+   ```
+
+   > 프로젝트 이름 뒤에  ` .`  <<은 해당 디렉토리 안에 프로젝트파일을 만들 수 있다. 
+   
+7. app 생성 및 등록
+
+8. url 설정
+
+9. views.py 설정
+
+10. templates 설정
+
+11. 서버 실행
 
 ### 0. 가상환경 실행 + .gitignore!
 

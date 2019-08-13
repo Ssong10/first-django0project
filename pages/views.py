@@ -51,3 +51,46 @@ def cube(request, num):
 def about(request, name, age):
     context = {'name':name, 'age':age}
     return render(request, 'about.html',context)
+
+def isitgwangbok(request):
+    now = datetime.datetime.now()
+    if now.month ==8 and now.day ==15:
+        result = True
+    else:
+        result = False
+    context ={
+        'result':result
+    }
+    return render(request, 'isitgwangbok.html', context)
+
+def ping(request):
+    return render(request,'ping.html')
+
+def pong(request):
+    # 사용자가 넘겨주는 값 받아오기
+    print(request.GET) # QueryDict
+    data = request.GET.get('data')
+    context = {
+        'data' : data,
+    }
+    return render(request,'pong.html',context)
+
+def signup(request):
+    return render(request,'signup.html')
+
+def signup_result(request):
+    name = request.POST.get('name')
+    username = request.POST.get('username')
+    pwd = request.POST.get('pwd')
+    pwd_confirmation = request.POST.get('pwd_confirmation')
+    if pwd == pwd_confirmation:
+        result = "회원가입을 축하드립니다."
+    else:
+        result = "비밀번호를 다시 확인해주세요"
+    context = {
+        'pwd' : pwd,
+        'name' : name,
+        'username' : username,
+        'result' : result
+    }
+    return render(request,'signup_result.html',context)
