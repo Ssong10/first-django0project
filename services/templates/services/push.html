@@ -8,8 +8,10 @@ h1 {
 
 {% block body %}
 <h1>Push Number</h1>
+<!-- 1. 어디로 보낼지 (요청 경로) -->
 <form action="/services/pull">
-  <input name="num" type="number">
+  <!-- 2. 각각의 내용을 어디에 담아서 보낼지 (요청 변수) -->
+  <input name="number" type="number">
   <input type="submit" value="push!">
 </form>
 {% endblock %}

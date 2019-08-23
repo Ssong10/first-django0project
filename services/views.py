@@ -26,8 +26,8 @@ def push(request):
     return render(request, 'services/push.html')
 
 def pull(request):
-    num = request.GET.get('num')
+    number = request.GET.get('number')
     context = {
-        'num' : num
+        'number' : number
     }
     return render(request,'services/pull.html',context)
